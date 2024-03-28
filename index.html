@@ -18,13 +18,33 @@
          type="text/css"
       />
       <script src="https://cdn.tailwindcss.com"></script>
+      <!-- tailwind custom css style -->
+      <script>
+         tailwind.config = {
+            theme: {
+               extend: {
+                  colors: {
+                     clifford: "#da373d",
+                     primaryBtnColor: "#E76F51",
+                     sliderBg: "rgba(231, 111, 81, 0.10)",
+                  },
+               },
+            },
+         };
+      </script>
+      <!-- custom css style -->
+      <style>
+         .font-poppins {
+            font-family: "Poppins", sans-serif;
+         }
+      </style>
    </head>
-   <body>
-      <header>
+   <body class="font-poppins">
+      <header class="md:container md:mx-auto">
          <!-- navbar -->
-         <nav>
+         <nav class="my-14">
             <div class="navbar bg-base-100">
-               <div class="navbar-start">
+               <div class="flex-1">
                   <div class="dropdown">
                      <div
                         tabindex="0"
@@ -61,23 +81,165 @@
                         <li><a>Item 3</a></li>
                      </ul>
                   </div>
-                  <a class="btn btn-ghost text-xl">daisyUI</a>
+                  <a class="btn btn-ghost text-4xl font-bold text-black"
+                     >Biker Zone</a
+                  >
                </div>
                <div class="navbar-center hidden lg:flex">
                   <ul class="menu menu-horizontal px-1">
-                     <li><a>Home</a></li>
-                     <li><a>Shop</a></li>
-                     <li><a>News</a></li>
-                     <li><a>Contact</a></li>
+                     <li class="text-black text-base font-medium">
+                        <a>Home</a>
+                     </li>
+                     <li class="text-black text-base font-medium">
+                        <a>Shop</a>
+                     </li>
+                     <li class="text-black text-base font-medium">
+                        <a>News</a>
+                     </li>
+                     <li class="text-black text-base font-medium">
+                        <a>Contact</a>
+                     </li>
                   </ul>
                </div>
-               <div class="navbar-end">
-                  <a class="btn btn-error">Login</a>
+               <div>
+                  <a class="btn text-white font-bold text-xl bg-primaryBtnColor"
+                     >Login</a
+                  >
                </div>
             </div>
          </nav>
+         <!-- slider -->
+         <div class="carousel w-full md:h-[550px] bg-sliderBg">
+            <!-- slide 1 -->
+            <div id="slide1" class="carousel-item relative w-full">
+               <div class="flex flex-col md:flex-row p-6 md:p-24">
+                  <div class="space-y-7 flex-1">
+                     <h2
+                        class="text-black text-2xl md:text-4xl lg:text-6xl font-bold"
+                     >
+                        Ride-on R15 V4 <br />
+                        with Smile
+                     </h2>
+                     <p class="text-base text-black font-light">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                     </p>
+                     <button
+                        class="text-white text-xl font-semibold btn bg-primaryBtnColor"
+                     >
+                        Purchase
+                     </button>
+                  </div>
+                  <div class="flex-1">
+                     <img src="./images/slider/bike1.png" class="w-full" />
+                  </div>
+               </div>
+               <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+               >
+                  <a href="#slide4" class="btn btn-circle">❮</a>
+                  <a href="#slide2" class="btn btn-circle">❯</a>
+               </div>
+            </div>
+            <!-- slider 2 -->
+            <div id="slide2" class="carousel-item relative w-full">
+               <div class="flex flex-col md:flex-row p-6 md:p-24">
+                  <div class="space-y-7 flex-1">
+                     <h2
+                        class="text-black text-2xl md:text-4xl lg:text-6xl font-bold"
+                     >
+                        RASEL SARKER V6 <br />
+                        with Smile
+                     </h2>
+                     <p class="text-base text-black font-light">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                     </p>
+                     <button
+                        class="text-white text-xl font-semibold btn bg-primaryBtnColor"
+                     >
+                        Purchase
+                     </button>
+                  </div>
+                  <div class="flex-1">
+                     <img src="./images/slider/bike2.png" class="w-full" />
+                  </div>
+               </div>
+               <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+               >
+                  <a href="#slide1" class="btn btn-circle">❮</a>
+                  <a href="#slide3" class="btn btn-circle">❯</a>
+               </div>
+            </div>
+            <!-- slider 3 -->
+            <div id="slide3" class="carousel-item relative w-full">
+               <div class="flex flex-col md:flex-row p-6 md:p-24">
+                  <div class="space-y-7 flex-1">
+                     <h2
+                        class="text-black text-2xl md:text-4xl lg:text-6xl font-bold"
+                     >
+                        HONDA GT5 <br />
+                        with Smile
+                     </h2>
+                     <p class="text-base text-black font-light">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                     </p>
+                     <button
+                        class="text-white text-xl font-semibold btn bg-primaryBtnColor"
+                     >
+                        Purchase
+                     </button>
+                  </div>
+                  <div class="flex-1">
+                     <img src="./images/slider/bike3.png" class="w-full" />
+                  </div>
+               </div>
+               <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+               >
+                  <a href="#slide2" class="btn btn-circle">❮</a>
+                  <a href="#slide4" class="btn btn-circle">❯</a>
+               </div>
+            </div>
+            <!-- slider 4 -->
+            <div id="slide4" class="carousel-item relative w-full">
+               <div class="flex flex-col md:flex-row p-6 md:p-24">
+                  <div class="space-y-7 flex-1">
+                     <h2
+                        class="text-black text-2xl md:text-4xl lg:text-6xl font-bold"
+                     >
+                        HERO SMART SPEED GAINER
+                     </h2>
+                     <p class="text-base text-black font-light">
+                        Amet minim mollit non deserunt ullamco est sit aliqua
+                        dolor do amet sint. Velit officia consequat duis enim
+                        velit mollit.
+                     </p>
+                     <button
+                        class="text-white text-xl font-semibold btn bg-primaryBtnColor"
+                     >
+                        Purchase
+                     </button>
+                  </div>
+                  <div class="flex-1">
+                     <img src="./images/slider/bike4.png" class="w-full" />
+                  </div>
+               </div>
+               <div
+                  class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+               >
+                  <a href="#slide3" class="btn btn-circle">❮</a>
+                  <a href="#slide1" class="btn btn-circle">❯</a>
+               </div>
+            </div>
+         </div>
       </header>
-      <main></main>
+      <main class="md:container md:mx-auto"></main>
       <footer></footer>
    </body>
 </html>
